@@ -1,0 +1,36 @@
+<div>
+    <table class="table table-bordered">
+        <th>Arrival Time</th>
+        <th>Departure Time</th>
+        <th>Destination Time</th>
+        <th>Train Type</th>
+        <th>Train Name</th>
+        <th>End Station</th>
+        <th>End Time</th>
+        <% trains.forEach(function (train) { %>
+        <tr>
+            <td><%= train.arrivalTime %></td>
+            <td><%= train.depatureTime %></td>
+            <td><%= train.arrivalTimeEndStation %></td>
+            <td><%= train.trainType %></td>
+            <td><%= train.trainName %></td>
+            <td><%= train.finalStationName %></td>
+            <td><%= train.arrivalTimeFinalStation %></td>
+        </tr>
+        <% }); %>
+    </table>
+</div>
+<div>
+    Ticket Prices:
+    <table class="table table-bordered">
+        <th>Class Name</th>
+        <th>Price (Rs)</th>
+        <% prices.forEach(function (price) { %>
+        <tr>
+            <td><%= price.className %></td>
+            <td><%= price.priceLKR %></td>
+        </tr>
+        <% }); %>
+    </table>
+    Total Distance: <%= prices[0].distanceKM %> km
+</div>
